@@ -1,0 +1,88 @@
+
+<!--<div class="col-lg-6 col-12 pb-3">
+    <div class="card h-100">
+      <div class="card-body">
+        <h2 class="text-center mb-4">Sesion</h2>
+        <form #loginForm="ngForm" (ngSubmit)="btnLogin()" class="py-2" role="form">
+          
+          <div class="form-group">
+            <label for="inputEmailForm" class="sr-only form-control-label"
+              >Correo electrónico</label
+            >
+            <div class="mx-auto col-sm-10">
+              <input
+                #correo="ngModel"
+                name="correo"
+                [(ngModel)]="user.correo"
+                type="text"
+                class="form-control"
+                placeholder="Correo electrónico"
+                required=""
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputPasswordForm" class="sr-only form-control-label"
+              >Contraseña</label
+            >
+            <div class="mx-auto col-sm-10">
+              <input
+                #password="ngModel"
+                name="password"
+                [(ngModel)]="user.password"
+                type="password"
+                class="form-control"
+                placeholder="Contraseña"
+                required=""
+              />
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="mx-auto col-sm-10 pb-3 pt-2">
+              <button
+               type="submit"
+            class="btn btn-outline-primary btn-lg btn-block"
+              >
+                Aceptar
+              </button>
+              
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>-->
+  <body>
+    <div class="login">
+        <form #loginForm="ngForm" (ngSubmit)="btnLogin()" class="py-2" role="form">
+          <div class="login-screen">
+            <div>
+              <img src="assets/img/hospital.jpg" style="width: 115.5%; margin-left: -20px; border-radius: 10px 10px 0px 0px" /><br />
+            </div>
+            <br>
+            <div class="app-title">
+            </div>
+         
+            <div >
+              <div class="control-group">
+                <input  #correo="ngModel" value="" name="correo" [(ngModel)]="user.correo" type="text" class="login-field" placeholder="Correo electrónico" required="" id="login-name"/>
+            <label for="login-name" class="login-field-icon fui-user" ></label>  
+            </div>
+        
+           
+          <div class="control-group">
+              <input #password="ngModel" name="password" [(ngModel)]="user.password" type="password" class="login-field" value="" placeholder="Contraseña" required="" id="login-pass" />
+            <label class="login-field-icon fui-lock" for="login-pass" ></label>
+            </div>
+      
+              <button
+               type="submit">
+               <a class="btn btn-outline-primary btn-lg btn-block" >login</a>
+              </button>
+   
+              <li><a routerLink="../registro">Registro</a></li>
+            </div>
+          </div>
+        </form>
+        </div>
+      </body>

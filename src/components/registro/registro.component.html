@@ -1,0 +1,54 @@
+
+  <body>
+    <div class="login">
+      <form #registroForm="ngForm" (ngSubmit)="btnRegistro()" class="py-2" role="form">
+        <div class="login-screen">
+          <div>
+            <img src="assets/img/hospital.jpg"
+              style="width: 115.5%; margin-left: -20px; border-radius: 10px 10px 0px 0px" /><br />
+          </div>
+          <br>
+  
+  
+          <div>
+            <div class="control-group">
+              <label class="login-field-icon fui-user" for="login-name"></label>
+              <input id="login-name" class="login-field" #nombre="ngModel" value="" name="nombre"
+                [(ngModel)]="user.nombre" type="text" placeholder="Nombre" required="" />
+            </div>
+  
+            <div class="control-group">
+              <label class="login-field-icon fui-user" for="login-name"></label>
+              <input class="login-field" #apellido="ngModel" name="apellido" [(ngModel)]="user.apellido" type="text"
+                placeholder="Apellido" value="" id="login-apellido" required="" />
+            </div>
+  
+            <div class="control-group">
+              <label class="login-field-icon fui-user" for="login-name"></label>
+              <input #cargo="ngModel" class="login-field" id="login-cargo" name="cargo" [(ngModel)]="user.cargo"
+                type="text" placeholder="cargo" required="" />
+            </div>
+  
+  
+            <div class="control-group">
+              <label class="login-field-icon fui-lock" for="login-pass"></label>
+              <input #correo="ngModel" name="correo" id="login-correo" class="login-field" [(ngModel)]="user.correo"
+                type="text" value="" placeholder="Correo electrónico" required="" />
+            </div>
+  
+            <div class="control-group">
+              <label class="login-field-icon fui-lock" for="login-pass"></label>
+              <input #password="ngModel" name="password" [(ngModel)]="user.password" type="password" class="login-field"
+                id="login-pass" value="" placeholder="Contraseña" required="" />
+            </div>
+  
+            <button type="submit">
+              <a class="btn btn-outline-secondary btn-lg btn-block">Agregar</a>
+  
+            </button>
+            <li><a routerLink="../login">Login</a></li>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
