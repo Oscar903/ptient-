@@ -9,7 +9,8 @@ import { RegistroComponent } from './components/registro/registro.component';
 import { PacienteComponent } from './components/paciente/paciente.component';
 import { HistorialComponent } from './components/historial/historial.component';
 
-const rutas: Routes = [
+const rutas: Routes = 
+     {path:'', component: LoginComponent},
   { path: 'registro', component: RegistroComponent },
   { path: 'paciente', component: PacienteComponent },
   { path: 'login', component: LoginComponent },
